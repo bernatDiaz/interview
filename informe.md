@@ -39,25 +39,5 @@ Me ha saltado el siguiente error:
 
 AttributeError: 'Make_Time_Features' object has no attribute 'list_of_features'
 
-He intentado entrenar el modelo con el primer metodo del articulo
-
-Me ha dado el siguiente error
-
-ValueError: DataFrame.dtypes for data must be int, float, bool or category.  When
-                categorical type is supplied, DMatrix parameter `enable_categorical` must
-                be set to `True`.sex, smoker, region
-                
-He usado un column transformer
-
-cat_attribs = ['sex', 'smoker', 'region']
-full_pipeline = ColumnTransformer([('cat', OneHotEncoder(handle_unknown='ignore'), cat_attribs)], remainder='passthrough')
-
-encoder = full_pipeline.fit(x)
-
-x = encoder.transform(x)
-y = encoder.transform(y)
-
-Me ha dado el siguiente error
-
-raise ValueError(ValueError: X does not contain any features, but ColumnTransformer is expecting 6 features
+He buscado por internet y he encontrado que pycaret necesita la version 0.23.2 de scikit. Pero al intentar instalar esa version en anaconda me da un error de compatibilidad y no se instala.
 
