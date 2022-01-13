@@ -41,3 +41,11 @@ AttributeError: 'Make_Time_Features' object has no attribute 'list_of_features'
 
 He buscado por internet y he encontrado que pycaret necesita la version 0.23.2 de scikit. Pero al intentar instalar esa version en anaconda me da un error de compatibilidad y no se instala.
 
+He instalado python 3.8 en un entorno virtual y pycaret se ha instalado correctamente.
+
+A la hora de subirlo a Heroku he tenido 2 problemas:
+
+1, Heroku no encontraba el puerto. Lo he solucionado cambiando el host de la app a 0.0.0.0
+
+2, No encontraba la carpeta Templates ni Styles. Lo he solucionado cambiando el nombre de las carpetas de Templates a templates y de Styles a styles.
+
